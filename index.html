@@ -6,9 +6,9 @@
     <title>Random Background for Stylish</title>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            // Array of image URLs
+            // Array of image URLs (make sure these paths are correct and accessible)
             const images = [
-                'img1.gif',
+                'img1.gif', // Replace with actual file paths
                 'img2.jpg',
                 'img3.png',
                 'img4.jpeg'
@@ -17,8 +17,15 @@
             // Pick a random image
             const randomImage = images[Math.floor(Math.random() * images.length)];
 
+            // Log the selected image to ensure the script is running
+            console.log('Random image selected:', randomImage);
+
             // Add the random image URL as a data attribute to the body
             document.body.setAttribute('data-bg', randomImage);
+
+            // Directly set the background for debugging purposes
+            document.body.style.background = `url(${randomImage}) no-repeat center center fixed`;
+            document.body.style.backgroundSize = 'cover';
         });
     </script>
 </head>
