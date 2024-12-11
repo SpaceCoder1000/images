@@ -3,34 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Background</title>
-    <style id="dynamic-style">
-        /* Placeholder for dynamic background CSS */
-    </style>
+    <title>Random Background for Stylish</title>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             // Array of image URLs
             const images = [
                 'img1.gif',
-                'im2.jpg',
                 'img1.gif',
+                'img2.jpg',
                 'img2.jpg'
             ];
 
             // Pick a random image
             const randomImage = images[Math.floor(Math.random() * images.length)];
 
-            // Apply the random background to the body
-            const styleTag = document.getElementById('dynamic-style');
-            styleTag.textContent = `
-                body {
-                    background: url('${randomImage}') no-repeat center center fixed;
-                    background-size: cover;
-                    margin: 0;
-                    height: 100vh;
-                    overflow: hidden;
-                }
-            `;
+            // Add the random image URL as a data attribute to the body
+            document.body.setAttribute('data-bg', randomImage);
         });
     </script>
 </head>
