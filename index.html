@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Background</title>
+    <style id="dynamic-style">
+        /* Placeholder for dynamic background CSS */
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Array of image URLs
+            const images = [
+                'img1',
+                'im2',
+                'img1',
+                'img2'
+            ];
+
+            // Pick a random image
+            const randomImage = images[Math.floor(Math.random() * images.length)];
+
+            // Apply the random background to the body
+            const styleTag = document.getElementById('dynamic-style');
+            styleTag.textContent = `
+                body {
+                    background: url('${randomImage}') no-repeat center center fixed;
+                    background-size: cover;
+                    margin: 0;
+                    height: 100vh;
+                    overflow: hidden;
+                }
+            `;
+        });
+    </script>
+</head>
+<body>
+    <h1 style="color: white; text-align: center; margin-top: 40vh;">Random Background</h1>
+</body>
+</html>
